@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2family=Fraunces:opsz,wght@9...144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fraunces', 'Montserrat', serif, sans-serif;
+    font-size: 16px;
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #fff;
+    margin: 30px auto;
+    padding: 0 30px;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h5{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+}
+p {
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6em;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+p.current {
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 24px;
+    padding-right: 26px;  
+}
+p.former {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+button {
+    background-color: hsl(158, 36%, 37%);
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100%;
+}
+
+@media screen and (max-width: 628px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .product img {
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .info{
+        display: block;
+    }
+    .info h5, .info h2, .info p, .info .price{
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container{
+        margin: 15px auto;
+        padding: 0 16px;
+    }
+    .product img{
+        max-height: 290px;
+    }
+    .info{
+        padding: 24px;
+    }
+    .info h5, .info h2, .info p, .info .price{
+        padding-bottom: 16px;
+    }
+    .info h2{
+        font-size: 28px;
+    }
+    .info p{
+        font-size: 12px;
+    }
+    .price .current {
+        font-size: 22px;
+    }
+    button{
+        padding: 12px 0;
+        font-size: 14px;
+    }
+}
